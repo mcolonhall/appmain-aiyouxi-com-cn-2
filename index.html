@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 简明访问指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', Helvetica, Arial, sans-serif;
+            background: #f4f5f7;
+            color: #1e1e2f;
+            line-height: 1.6;
+        }
+
+        /* 深色头图 */
+        .hero {
+            background: #0d0d1a;
+            background-image: radial-gradient(circle at 30% 40%, #1a1a35 0%, #0a0a17 100%);
+            padding: 4rem 1.5rem 3.2rem;
+            text-align: center;
+            color: #eaeef5;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero .sub {
+            font-size: 1.1rem;
+            color: #b6c9e0;
+            max-width: 540px;
+            margin: 0.5rem auto 0;
+            font-weight: 350;
+            border-top: 1px solid #2d2d4a;
+            padding-top: 1.2rem;
+            display: inline-block;
+        }
+
+        /* 浅色正文区 */
+        .content {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 3rem 1.8rem 4rem;
+            background: #ffffff;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+        }
+
+        .content section {
+            margin-bottom: 2.4rem;
+        }
+
+        .content h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+            border-left: 4px solid #2a6f97;
+            padding-left: 0.9rem;
+            color: #0b1e2e;
+        }
+
+        .content p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: #262b33;
+        }
+
+        .content p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 引用提示块 */
+        .tip-block {
+            background: #f0f4fa;
+            border-left: 6px solid #2a6f97;
+            border-radius: 0 8px 8px 0;
+            padding: 1.5rem 1.8rem;
+            margin: 2.2rem 0 2.6rem;
+            font-size: 0.96rem;
+        }
+
+        .tip-block strong {
+            color: #0d2b46;
+        }
+
+        .tip-block a {
+            color: #145c8a;
+            font-weight: 500;
+        }
+
+        a {
+            color: #145c8a;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color 0.18s, background 0.18s;
+        }
+
+        a:hover {
+            color: #06233c;
+            background: #e3edf7;
+            text-decoration: none;
+            border-radius: 2px;
+        }
+
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 1.8rem 0 0.8rem;
+        }
+
+        .feature-item {
+            flex: 1 1 200px;
+            background: #f9fafc;
+            border-radius: 12px;
+            padding: 1.2rem 1.2rem 1rem;
+            border: 1px solid #e4e8f0;
+        }
+
+        .feature-item h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 0.4rem;
+            color: #152b3b;
+        }
+
+        .feature-item p {
+            font-size: 0.92rem;
+            color: #3c4452;
+            margin-bottom: 0;
+        }
+
+        .faq-summary {
+            background: #f5f7fb;
+            padding: 1.6rem 1.8rem;
+            border-radius: 14px;
+            margin-top: 2.6rem;
+        }
+
+        .faq-summary dt {
+            font-weight: 550;
+            margin-top: 1rem;
+            color: #102433;
+            display: flex;
+            align-items: baseline;
+        }
+
+        .faq-summary dt:first-of-type {
+            margin-top: 0;
+        }
+
+        .faq-summary dd {
+            margin-left: 0.5rem;
+            margin-bottom: 0.6rem;
+            color: #2d3545;
+            font-size: 0.95rem;
+            border-left: 2px dotted #b8c9dd;
+            padding-left: 1rem;
+        }
+
+        .visit-line {
+            text-align: center;
+            margin-top: 2.6rem;
+            padding: 1rem 0 0.4rem;
+            font-size: 1rem;
+            border-top: 1px solid #dbe2ed;
+            color: #1b2d40;
+        }
+
+        .visit-line a {
+            font-weight: 500;
+        }
+
+        /* 响应式细节 */
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .sub {
+                font-size: 0.95rem;
+                padding-top: 1rem;
+            }
+
+            .content {
+                padding: 2.2rem 1.2rem 3rem;
+            }
+
+            .feature-grid {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .feature-item {
+                flex: 1 1 auto;
+            }
+
+            .tip-block {
+                padding: 1.2rem 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 2.8rem 1rem 2.4rem;
+            }
+
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .content h2 {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <h1>爱游戏 · 简明使用指南</h1>
+        <div class="sub">一份面向普通访问者的整理说明，帮你快速了解平台定位与访问方式</div>
+    </header>
+
+    <main class="content">
+        <section>
+            <h2>平台背景与定位</h2>
+            <p><strong>爱游戏</strong> 是一个面向游戏兴趣人群的内容与工具平台，主要提供游戏资讯、轻度互动以及社区化浏览体验。它不涉及支付、充值或虚拟资产交易，整体定位偏向于信息聚合与兴趣交流。如果你正在寻找一个可以浏览推荐内容、查看游戏相关话题的地方，这个站点可以作为一个选择。</p>
+            <p>从功能范围来看，<strong>爱游戏</strong> 更接近一种轻量级的内容门户——你可以在其中看到编辑推荐的文章、用户分享的短评以及部分分类索引。它不承载游戏下载或在线游玩功能，因此更适合作参考阅读或兴趣探索。</p>
+        </section>
+
+        <section>
+            <h2>如何访问及使用建议</h2>
+            <p>使用 <strong>爱游戏</strong> 不需要注册或登录即可浏览大部分内容。网站页面以信息展示为主，结构清晰。建议通过稳定的网络环境直接访问主域名，在浏览器地址栏输入即可到达首页。如果你习惯使用移动设备，页面在手机上的自适应表现也较为流畅。</p>
+            <p>需要注意，部分互动功能（如评论、收藏）可能需要你完成简单注册。注册流程只要求基本的账号信息，不会索取敏感数据。不论你是新用户还是只是路过看看，都可以直接使用 <a href="https://appmain-aiyouxi.com.cn">爱游戏</a> 来获取内容，无需额外配置。</p>
+        </section>
+
+        <!-- 引用提示块 -->
+        <div class="tip-block">
+            <strong>💡 访问提示：</strong> 如果你在浏览器中打开站点后遇到加载缓慢或布局异常，请先确认网络连接是否正常，或尝试刷新页面。部分旧版浏览器可能无法完全支持现代排版，建议更新至最新版本。<br>
+            <span style="display:block; margin-top:0.5rem;">想直接开始？ 点击 <a href="https://appmain-aiyouxi.com.cn">爱游戏</a> 即可进入首页浏览最新内容。</span>
+        </div>
+
+        <section>
+            <h2>内容特点与场景举例</h2>
+            <p>根据对站点的观察，<strong>爱游戏</strong> 的内容组织方式比较有规律：首页通常会陈列近期更新的文章列表，按照发布时间或推荐值排列。你不需要费力翻找，就能看到比较新的内容。另外，每个栏目或专题都有明确的标题，帮助快速定位。</p>
+
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>📄 文章浏览</h3>
+                    <p>阅读游戏相关随笔、测评或资讯，每篇文章独立成页，排版简洁，适合日常碎片阅读。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🏷️ 分类索引</h3>
+                    <p>通过标签或分类导航筛选内容，例如按游戏类型、平台或热度查看，减少信息过载。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>💬 轻量互动</h3>
+                    <p>注册后可以参与评论或收藏，与同好交流观点。整体氛围偏向友好讨论。</p>
+                </div>
+            </div>
+
+            <p>适用场景举例：日常工作间隙想找点轻松的游戏内容阅读；需要了解某款游戏的大众评价或背景资料；或者单纯想发现一些以前没留意过的游戏话题。在这些情况下，<strong>爱游戏</strong> 都可以作为一个内容来源。</p>
+        </section>
+
+        <section>
+            <h2>常见疑问摘要</h2>
+            <dl class="faq-summary">
+                <dt>问：网站是否免费使用？</dt>
+                <dd>是的，所有公开内容均可免费浏览，不需要付费或订阅。</dd>
+
+                <dt>问：需要下载客户端吗？</dt>
+                <dd>不需要。整个平台基于网页访问，无需安装任何软件。</dd>
+
+                <dt>问：内容更新频率如何？</dt>
+                <dd>根据近期记录，大约每周会有数次更新，以图文形式发布。没有固定时刻表，但内容保持活跃。</dd>
+
+                <dt>问：我的浏览记录会被收集吗？</dt>
+                <dd>网站使用基础分析工具统计访问量，但不会收集个人身份信息。详情可参考站内隐私说明。</dd>
+            </dl>
+        </section>
+
+        <div class="visit-line">
+            <span>👉 直接访问 </span><a href="https://appmain-aiyouxi.com.cn">爱游戏</a><span>，开始浏览最新内容。</span>
+        </div>
+    </main>
+</body>
+</html>

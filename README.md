@@ -1,2 +1,33 @@
-# appmain-aiyouxi-com-cn-2
-爱游戏 - https://appmain-aiyouxi.com.cn
+# 爱游戏 - 游戏资源与资讯平台
+
+## 简介
+
+**爱游戏** 是一个专注于游戏资源与资讯分享的网站，提供丰富的游戏内容与便捷的在线体验。通过访问 [https://appmain-aiyouxi.com.cn](https://appmain-aiyouxi.com.cn)，用户可以获取各类游戏的介绍、下载链接以及最新动态。
+
+## 特点
+
+- **资源丰富**：涵盖多种类型的游戏资源，满足不同玩家的需求。
+- **信息更新**：定期更新游戏资讯、攻略与评测，帮助用户了解最新游戏趋势。
+- **访问便捷**：用户可直接通过浏览器访问 [https://appmain-aiyouxi.com.cn](https://appmain-aiyouxi.com.cn)，无需额外安装复杂工具。
+- **界面友好**：网站设计简洁清晰，便于快速查找所需内容。
+
+## 访问方式
+
+您可以通过以下方式访问爱游戏：
+
+- 直接点击链接：[https://appmain-aiyouxi.com.cn](https://appmain-aiyouxi.com.cn)
+- 在浏览器地址栏手动输入 `https://appmain-aiyouxi.com.cn`
+
+## 使用建议
+
+- 建议使用最新版本的 Chrome、Firefox 或 Edge 浏览器访问，以获得最佳体验。
+- 网站内容仅供个人学习与娱乐参考，请遵守相关法律法规。
+- 如遇到访问问题，可尝试刷新页面或更换网络环境。
+
+## 免责声明
+
+爱游戏仅作为信息展示平台，不存储任何游戏文件或资源。所有内容均来自公开渠道，用户在使用过程中应自行判断其合法性与安全性。如有任何疑问，请通过网站提供的联系方式进行反馈。
+
+---
+
+感谢您对爱游戏的关注，欢迎访问 [https://appmain-aiyouxi.com.cn](https://appmain-aiyouxi.com.cn) 获取更多游戏相关内容。
