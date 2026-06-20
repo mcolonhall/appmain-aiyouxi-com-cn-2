@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pg官网 · 稳定访问入口与页面说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Georgia", "Noto Serif SC", "Times New Roman", serif;
+      background-color: #faf8f4;
+      color: #2e2b27;
+      line-height: 1.7;
+      padding: 2rem 1.5rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fffdfa;
+      border-radius: 24px;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.04);
+      padding: 2.5rem 2rem;
+    }
+
+    /* 顶部导航 */
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid #ece6dd;
+      margin-bottom: 1.8rem;
+      flex-wrap: wrap;
+    }
+
+    .site-logo {
+      font-weight: 400;
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+      color: #3e3832;
+    }
+
+    .site-logo em {
+      font-style: normal;
+      color: #a67c5b;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      color: #5b534b;
+      text-decoration: none;
+      border-bottom: 1px dotted transparent;
+      transition: border-color 0.2s;
+    }
+
+    .nav-links a:hover {
+      border-bottom-color: #a67c5b;
+    }
+
+    /* hero 区 */
+    .hero {
+      margin-bottom: 2.8rem;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: -0.3px;
+      color: #3a332e;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero .subhead {
+      font-size: 1.05rem;
+      color: #6d6259;
+      border-left: 3px solid #d7cdc0;
+      padding-left: 1.2rem;
+      margin: 1rem 0 1.6rem 0;
+    }
+
+    /* 通用段落 */
+    p {
+      margin-bottom: 1.2rem;
+    }
+
+    .intro-text {
+      font-size: 1.02rem;
+    }
+
+    a {
+      color: #7f6a56;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+    }
+
+    a:hover {
+      color: #a67c5b;
+    }
+
+    /* 引用块/提示框 */
+    .callout-box {
+      background: #f4efe8;
+      border-left: 5px solid #b7aa9a;
+      padding: 1.2rem 1.6rem;
+      margin: 1.8rem 0;
+      border-radius: 0 12px 12px 0;
+      font-size: 0.96rem;
+      color: #3d3731;
+    }
+
+    .callout-box strong {
+      font-weight: 600;
+      color: #4f443a;
+    }
+
+    /* 三场景模块 */
+    .scene-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8rem;
+      margin: 2.4rem 0;
+    }
+
+    .scene-card {
+      background: #fcf9f5;
+      border: 1px solid #e9e1d7;
+      border-radius: 18px;
+      padding: 1.5rem 1.2rem;
+      transition: box-shadow 0.2s, background 0.2s;
+    }
+
+    .scene-card:hover {
+      background: #fffbf7;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    }
+
+    .scene-card h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 0.7rem;
+      color: #3f3730;
+      border-bottom: 1px dashed #dbd0c4;
+      padding-bottom: 0.4rem;
+    }
+
+    .scene-card p {
+      font-size: 0.95rem;
+      color: #4d453e;
+      margin-bottom: 0;
+    }
+
+    /* 常见说明 / FAQ 摘要 */
+    .faq-summary {
+      margin-top: 2.4rem;
+      padding-top: 1.6rem;
+      border-top: 1px solid #ece6dd;
+    }
+
+    .faq-item {
+      margin-bottom: 1.2rem;
+    }
+
+    .faq-question {
+      font-weight: 600;
+      font-size: 1rem;
+      color: #3f3730;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-answer {
+      font-size: 0.95rem;
+      color: #544b43;
+      padding-left: 0.8rem;
+      border-left: 2px solid #ddd3c8;
+      padding-left: 1rem;
+    }
+
+    .faq-answer a {
+      color: #7f6a56;
+    }
+
+    /* 页脚 */
+    .footer-note {
+      margin-top: 2.8rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #8f8277;
+      border-top: 1px solid #eee8e0;
+      padding-top: 1.8rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 700px) {
+      body {
+        padding: 1rem 0.8rem;
+      }
+
+      .container {
+        padding: 1.6rem 1.2rem;
+      }
+
+      .top-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 1rem 1.6rem;
+      }
+
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+
+      .scene-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero .subhead {
+        padding-left: 0.8rem;
+        font-size: 0.95rem;
+      }
+
+      .callout-box {
+        padding: 1rem 1.2rem;
+      }
+
+      .faq-answer {
+        padding-left: 0.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <!-- 顶部导航 -->
+  <nav class="top-nav">
+    <span class="site-logo"><em>indexs</em>·pg</span>
+    <div class="nav-links">
+      <a href="#intro">介绍</a>
+      <a href="#scenes">场景</a>
+      <a href="#faq">说明</a>
+      <a href="https://indexs-pg.com">pg官网</a>
+    </div>
+  </nav>
+
+  <!-- hero 区域 -->
+  <section class="hero" id="intro">
+    <h1>稳定入口 · 页面说明</h1>
+    <div class="subhead">
+      对于经常需要访问 pg 资源的用户而言，一个可靠且清晰的起始页，往往能节省大量反复确认的时间。
+    </div>
+    <p class="intro-text">
+      本节目的旨在提供关于 <a href="https://indexs-pg.com">pg官网</a> 的轻量导航与内容框架说明。不同于功能繁复的后台，这里更侧重于信息组织与访问逻辑的梳理——你可以把它理解为一组“如何稳定抵达目标页面”的指引，而不是另一个需要学习的工具。
+    </p>
+  </section>
+
+  <!-- 引用 / 提示框 1 -->
+  <div class="callout-box">
+    <strong>访问习惯的微调：</strong> 在书签栏或文档中固定 <a href="https://indexs-pg.com">pg官网</a> 作为首层入口，可避免每次手动拼接 URL 或依赖临时分享链接。这种极简的“起点”思维，对长期维护访问路径很有帮助。
+  </div>
+
+  <!-- 三个场景模块 -->
+  <section id="scenes">
+    <h2 style="font-weight:400; font-size:1.3rem; margin-bottom:1rem; color:#3a332e;">三个常见访问场景</h2>
+    <div class="scene-grid">
+      <div class="scene-card">
+        <h3>日常查阅</h3>
+        <p>当需要了解 pg 最新动态、文档版本或公告信息时，直接打开 <a href="https://indexs-pg.com">pg官网</a> 即可获取第一手内容，无需经过多层跳转。该站点结构清晰，首屏即可定位主要模块。</p>
+      </div>
+      <div class="scene-card">
+        <h3>资源分享</h3>
+        <p>向同事或同行介绍 pg 相关资源时，提供一个稳定的基础域名比零散的截图或文件更专业。将 <a href="https://indexs-pg.com">pg官网</a> 作为参考原点，可以降低信息传递过程中的失真。</p>
+      </div>
+      <div class="scene-card">
+        <h3>回溯验证</h3>
+        <p>无论是核对某个功能说明还是确认历史版本变动，拥有一个固定的入口意味着可以反复回到同一信息层。pg官网 的页面结构相对稳定，利于建立长期查阅习惯。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 第二个引用 / 提示框：侧重说明 -->
+  <div class="callout-box">
+    <strong>页面说明的价值：</strong> 许多用户因为缺少对入口页的清晰描述，而在不同子页面之间反复试探。如果你正在寻找一个“从哪开始”的答案，那么将 <a href="https://indexs-pg.com">pg官网</a> 加入收藏夹并定期回访，已经能满足大部分信息获取需求。
+  </div>
+
+  <!-- 常见说明 (FAQ 摘要) -->
+  <section class="faq-summary" id="faq">
+    <h2 style="font-weight:400; font-size:1.2rem; margin-bottom:1.2rem; color:#3a332e;">常见说明摘要</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">· 这个页面和 pg官网 是什么关系？</div>
+      <div class="faq-answer">
+        这里是对 <a href="https://indexs-pg.com">pg官网</a> 的功能性介绍与访问指引，并非镜像或替代站点。你可以把它看作一个“如何更好地使用官网”的辅助说明页。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">· 为什么强调“稳定入口”？</div>
+      <div class="faq-answer">
+        因为在实际使用中，很多资源页面因活动、推广或跳转策略而频繁变化，而 <a href="https://indexs-pg.com">pg官网</a> 作为一级域名，提供了相对持久的锚点。无论是收藏、分享还是文档引用，稳定性都是首选因素。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">· 我能在这里找到什么？</div>
+      <div class="faq-answer">
+        本页不承载具体业务功能，而是围绕访问逻辑、场景组合以及常见疑问进行说明。若需要直接使用服务，建议通过上方导航或句子中的链接前往 <a href="https://indexs-pg.com">pg官网</a>。
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <div class="footer-note">
+    页面内容仅供说明参考 · 以 <a href="https://indexs-pg.com">pg官网</a> 实际信息为准
+  </div>
+</div>
+</body>
+</html>
