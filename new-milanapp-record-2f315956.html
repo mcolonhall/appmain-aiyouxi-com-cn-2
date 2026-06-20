@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>米兰体育app · 简明指南与访问提醒</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: linear-gradient(145deg, #f9e5d6 0%, #fcd9b6 50%, #f5c8a8 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1.5rem;
+      line-height: 1.6;
+      color: #2e241e;
+    }
+
+    .page-container {
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    /* 主内容卡片 */
+    .card-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .card {
+      background: #fffffffb;
+      backdrop-filter: blur(2px);
+      border-radius: 36px;
+      box-shadow: 0 10px 30px rgba(160, 100, 60, 0.12), 0 4px 12px rgba(0, 0, 0, 0.05);
+      padding: 2rem 2.2rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: 1px solid rgba(255, 245, 235, 0.6);
+    }
+
+    .card:hover {
+      box-shadow: 0 18px 40px rgba(140, 80, 40, 0.14);
+      transform: translateY(-2px);
+    }
+
+    /* 目录感布局 —— 两列在宽屏 */
+    .directory-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    @media (max-width: 700px) {
+      .directory-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .card {
+        padding: 1.6rem 1.4rem;
+      }
+      body {
+        padding: 1.2rem 1rem;
+      }
+    }
+
+    .directory-title {
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #a67c62;
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+      border-bottom: 1px dashed #e8d3c4;
+      padding-bottom: 0.4rem;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: #3d2b21;
+      line-height: 1.2;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: #6f5546;
+      margin-bottom: 0.2rem;
+    }
+
+    .intro-tagline {
+      background: #f6ede6;
+      padding: 0.5rem 1.2rem;
+      border-radius: 60px;
+      display: inline-block;
+      font-size: 0.9rem;
+      color: #4f382c;
+      margin: 0.5rem 0 1rem 0;
+    }
+
+    .text-link {
+      color: #b4653e;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1.5px solid transparent;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .text-link:hover {
+      border-bottom-color: #b4653e;
+      color: #8a4f2f;
+    }
+
+    .list-bullet {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .list-bullet li {
+      position: relative;
+      padding-left: 1.6rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .list-bullet li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #c1815c;
+      font-size: 1.1rem;
+    }
+
+    .faq-item {
+      margin-bottom: 1.2rem;
+    }
+
+    .faq-q {
+      font-weight: 600;
+      color: #3b2a20;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-a {
+      color: #4f3d32;
+      padding-left: 0.8rem;
+      border-left: 2px solid #e5cfbe;
+    }
+
+    .reminder-box {
+      background: #f9f1ea;
+      border-radius: 28px;
+      padding: 1.5rem 2rem;
+      margin-top: 0.8rem;
+    }
+
+    .button-pill {
+      display: inline-block;
+      background: #f3d7c2;
+      color: #3b2a1f;
+      padding: 0.45rem 1.4rem;
+      border-radius: 60px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.1s;
+      border: 1px solid #e9cbb2;
+      margin-right: 0.6rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .button-pill:hover {
+      background: #e9c2a6;
+      transform: scale(0.98);
+    }
+
+    .footer-note {
+      text-align: center;
+      margin-top: 2.5rem;
+      font-size: 0.9rem;
+      color: #7c695c;
+      border-top: 1px solid #dfcdbc;
+      padding-top: 1.5rem;
+    }
+
+    .highlight-tag {
+      background: #e7d3c0;
+      padding: 0.2rem 1rem;
+      border-radius: 60px;
+      font-size: 0.8rem;
+      color: #3b2b20;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-note {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin: 1rem 0 0.2rem;
+    }
+
+    .stat-note span {
+      background: #f1e2d6;
+      padding: 0.2rem 1rem;
+      border-radius: 60px;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+<div class="page-container">
+  <div class="card-grid">
+
+    <!-- Hero 卡片 + 简明指南 -->
+    <div class="card">
+      <div class="directory-title">📖 知识库 · 快速索引</div>
+      <h1>米兰体育app · 从零开始</h1>
+      <div class="hero-sub">一份生活化的简明指南</div>
+      <div class="intro-tagline">📌 日常使用 & 访问提醒</div>
+      <p style="margin-top: 1rem;">
+        如果你是第一次接触 <a href="https://new-milanapp.com" class="text-link">米兰体育app</a>，
+        这里整理了几个最常被问到的基础知识点。不需要复杂操作，从了解页面布局到记住关键提示，
+        几分钟就能上手。
+      </p>
+      <p style="margin-top: 0.8rem;">
+        下面按照“目录感”分成几个区域：基本信息、使用场景、以及一些容易被忽略的提醒。
+        你可以像翻看小手册一样，按需浏览。
+      </p>
+    </div>
+
+    <!-- 两列目录区：说明区 + 提示区 -->
+    <div class="directory-row">
+      <!-- 说明区：特点 + 相关信息 -->
+      <div class="card">
+        <div class="directory-title">📋 说明 · 相关信息</div>
+        <div class="highlight-tag">日常场景</div>
+        <ul class="list-bullet">
+          <li><strong>信息展示</strong> — 主界面采用分区卡片，各项功能入口清晰，适合快速浏览。</li>
+          <li><strong>内容更新</strong> — 动态区域会呈现近期热点和活动提示，留意首页中部即可。</li>
+          <li><strong>账户与偏好</strong> — 个人设置集中在右上角区域，可调整通知偏好与显示语言。</li>
+          <li><strong>跨设备使用</strong> — 网页版与客户端数据互通，登录同一账户即可延续进度。</li>
+        </ul>
+        <div class="stat-note">
+          <span>⚙️ 常用功能</span>
+          <span>🔄 同步支持</span>
+          <span>📱 响应式适配</span>
+        </div>
+        <p style="margin-top: 1rem; color: #4d3a2e;">
+          平台整体偏向轻量、直接，没有过多层级。如果你习惯在浏览器中直接使用，记住
+          <a href="https://new-milanapp.com" class="text-link">米兰体育app</a>
+          的网址即可，无需额外下载。
+        </p>
+      </div>
+
+      <!-- 提示区 + 访问提醒 -->
+      <div class="card">
+        <div class="directory-title">⚡ 提示 · 访问提醒</div>
+        <div class="reminder-box" style="margin-top: 0;">
+          <p style="font-weight: 500; margin-bottom: 0.6rem;">🔔 出发前看一眼</p>
+          <ul class="list-bullet" style="margin-bottom: 0.4rem;">
+            <li>建议使用最新版浏览器，部分旧内核可能影响排版。</li>
+            <li>公共网络环境下，注意不要勾选“记住登录”选项。</li>
+            <li>如果页面加载异常，可尝试刷新或清除缓存后再试。</li>
+            <li>官方不会通过私信索取密码或验证码，谨防仿冒。</li>
+          </ul>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.8rem;">
+            <span class="button-pill">🔒 隐私提醒</span>
+            <span class="button-pill">📌 书签备用</span>
+            <span class="button-pill">🕒 高峰时段</span>
+          </div>
+        </div>
+        <p style="margin-top: 1rem; font-size: 0.95rem;">
+          另外，如果你想把
+          <a href="https://new-milanapp.com" class="text-link">米兰体育app</a>
+          添加到主屏幕，iOS 和 Android 都支持“添加到主屏幕”功能，这样下次找起来更方便。
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ 摘要 + 更多信息卡片 -->
+    <div class="card">
+      <div class="directory-title">❓ FAQ 摘要 · 你可能想知道的</div>
+      <div class="faq-item">
+        <div class="faq-q">Q: 需要使用特定设备吗？</div>
+        <div class="faq-a">A: 不需要。手机、平板、电脑都可以通过浏览器访问，保持网络畅通即可。部分交互针对触屏优化过。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Q: 页面上的内容多久更新一次？</div>
+        <div class="faq-a">A: 主要信息区块跟随活动节奏更新，一般数天到一周左右会有变化。你可以根据首页时间戳判断新鲜度。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Q: 遇到链接失效或白屏怎么办？</div>
+        <div class="faq-a">A: 先检查网络，然后尝试从 <a href="https://new-milanapp.com" class="text-link">米兰体育app</a> 直接进入。如果问题依旧，可能是临时维护，稍后再试。</div>
+      </div>
+      <div style="margin-top: 0.8rem; background: #f5eade; border-radius: 30px; padding: 1rem 1.6rem;">
+        <p style="font-size: 0.95rem;">💡 更多 FAQ 内容可以在站内帮助区域找到，本文摘只收录了最常见的三条。</p>
+      </div>
+    </div>
+
+    <!-- 尾注 / 简洁提醒 -->
+    <div class="footer-note">
+      <span style="background: #edddcf; padding: 0.15rem 1.2rem; border-radius: 60px;">📂 知识库入口 · 版本 2025</span>
+      <p style="margin-top: 0.8rem;">页面内容仅作介绍与指引，具体功能以实际界面为准。保持好奇，按需探索。</p>
+      <p style="margin-top: 0.3rem; font-size: 0.8rem; color: #9b8576;">—— 一份生活化的简明指南，希望对你有所帮助。</p>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
